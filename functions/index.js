@@ -1,6 +1,4 @@
 
-// const {onRequest} = require("firebase-functions/v2/https");
-
 // Import the necessary Firebase SDK modules
 const functions = require('firebase-functions');
 const admin = require('firebase-admin');

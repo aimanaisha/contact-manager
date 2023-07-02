@@ -71,3 +71,19 @@ exports.searchContacts = functions.https.onRequest(async (req, res) => {
   }
 });
 
+
+//Auth Functions 
+
+// function to create a user
+exports.addUser = functions.auth.user().onCreate((user)=>{
+  console.log(`${user.email} has been created...`)
+  return Promise.resolve
+})
+
+
+// function to delete a user
+exports.delUser = functions.auth.user().onDelete((user)=>{
+  console.log(`${user.email} has been deleted...`)
+  return Promise.resolve
+})
+
